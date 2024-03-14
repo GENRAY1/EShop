@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Domain", "EShop.Domain\EShop.Domain.csproj", "{B07C4D49-0835-46BC-A749-CF15AF93EE8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B07C4D49-0835-46BC-A749-CF15AF93EE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07C4D49-0835-46BC-A749-CF15AF93EE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07C4D49-0835-46BC-A749-CF15AF93EE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07C4D49-0835-46BC-A749-CF15AF93EE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
