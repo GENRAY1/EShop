@@ -2,17 +2,29 @@
 
 namespace EShop.Domain.CategoryAggregate;
 
-public class Category: BaseAggregate
+public class Category : BaseAggregate
 {
-    public Category(Guid id, string name, IReadOnlyCollection<string> requiredAttributes) : base(id)
-    {
+    private string _name;
+    private IReadOnlyCollection<string> _requiredAttributes;
+    
 
-        if (string.IsNullOrEmpty(name)) throw new NoCategoryName();
-        if (requiredAttributes.Count == 0) throw new NoCategoryRequiredAttributes();
-        
-        Name = name;
-        RequiredAttributes = requiredAttributes;
+    public required string Name
+    {
+        get => _name;
+        init
+        {
+            if (string.IsNullOrEmpty(value)) throw new NoCategoryNameException();
+            _name = value;
+        }
     }
-    public string Name { get; }
-    public IReadOnlyCollection<string> RequiredAttributes { get; }
+
+    public IReadOnlyCollection<string> RequiredAttributes
+    {
+        get => _requiredAttributes;
+        init
+        {
+            if (value.Count == 0) throw new NoCategoryRequiredAttributesException();
+            _requiredAttributes = value;
+        }
+    }
 }

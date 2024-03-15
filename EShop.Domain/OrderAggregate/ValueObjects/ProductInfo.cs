@@ -1,8 +1,8 @@
 namespace EShop.Domain.OrderAggregate.ValueObjects;
 
-public class ProductInfo(Guid id, int count)
+public class ProductInfo()
 {
-    private Guid Id { get; } = id;
-    private int Count { get; } = count;
+    public required Guid Id { get; init; } 
+    public required int Count { get; init; }
 }
 

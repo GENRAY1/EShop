@@ -1,7 +1,7 @@
 ﻿namespace EShop.Domain;
 
-public abstract class BaseAggregate(Guid id)
+public abstract class BaseAggregate()
 {
-    public Guid Id { get; } = id;
+    public Guid Id { get; } = Guid.NewGuid();
     
 }
