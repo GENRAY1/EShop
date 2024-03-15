@@ -18,6 +18,7 @@ Product iphone = new Product(
     Guid.NewGuid(),
     "Iphone 13",
     1000,
+    5,
     categorySmartphones,
     new Dictionary<string, string>
     {
@@ -32,6 +33,7 @@ Product xiaomi = new Product(
     Guid.NewGuid(),
     "Xiaomi Redmi 10",
     1000,
+    10,
     categorySmartphones,
     new Dictionary<string, string>
     {
