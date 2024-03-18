@@ -6,7 +6,6 @@ public class Category : BaseAggregate
 {
     private string _name;
     private IReadOnlyCollection<string> _requiredAttributes;
-    
 
     public required string Name
     {
@@ -17,8 +16,8 @@ public class Category : BaseAggregate
             _name = value;
         }
     }
-
-    public IReadOnlyCollection<string> RequiredAttributes
+    
+    public required IReadOnlyCollection<string> RequiredAttributes
     {
         get => _requiredAttributes;
         init
@@ -27,4 +26,23 @@ public class Category : BaseAggregate
             _requiredAttributes = value;
         }
     }
+
+    /*
+    private IReadOnlyDictionary<string, AttributeValues> _requiredAttributes;
+    
+    public required IReadOnlyDictionary<string, AttributeValues> RequiredAttributes
+    {
+        get => _requiredAttributes;
+        init
+        {
+            if (value.Count == 0) throw new NoCategoryRequiredAttributesException();
+            _requiredAttributes = value;
+        }
+    }*/
 }
+
+/*ValueObject
+public class AttributeValues
+{
+    public required IReadOnlyDictionary<string, int> Values { get; init; }
+}*/

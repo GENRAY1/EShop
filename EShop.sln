@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Domain", "EShop.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAggregate", "TestAggregate\TestAggregate.csproj", "{84CEEE3A-6BF0-474F-9AFA-2C00A2EAF606}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.Infrastructure", "EShop.Infrastructure\EShop.Infrastructure.csproj", "{2DBCD24F-121D-4746-BDDA-7927E77DEC86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{84CEEE3A-6BF0-474F-9AFA-2C00A2EAF606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84CEEE3A-6BF0-474F-9AFA-2C00A2EAF606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84CEEE3A-6BF0-474F-9AFA-2C00A2EAF606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBCD24F-121D-4746-BDDA-7927E77DEC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBCD24F-121D-4746-BDDA-7927E77DEC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBCD24F-121D-4746-BDDA-7927E77DEC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBCD24F-121D-4746-BDDA-7927E77DEC86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -6,32 +6,31 @@ namespace EShop.Domain.OrderAggregate;
 
 public class Order: BaseAggregate
 {
-
-    public Order(IReadOnlyCollection<Product> products)
+    public required IReadOnlyCollection<Product> Products
     {
-        if (products.Count == 0) throw new NoProductsInOrderException();
-        
-        TotalCost = products.Sum(p => p.Cost);
-        _orderItems = products.Select(p => new ProductInfo
+        init
         {
-            Id = p.Id, 
-            Count = p.Count
-        }).ToArray();
+            if(value.Count == 0) throw new NoProductsInOrderException();
+            TotalCost = value.Sum(p => p.Cost * p.Count);
+            
+            OrderItems = value.Select(p => new ProductInfo
+            {
+                Id = p.Id, 
+                Count = p.Count
+            }).ToArray();
+        }
     }
-    public decimal TotalCost { get; }
-    public DateTime CreationTime { get; } = DateTime.UtcNow;
-    public bool IsComplited { get; private set; }
 
     public required CustomerInfo CustomerInfo { get; init; }
     public required DeliveryInfo? DeliveryInfo { get; init; }
+    public decimal TotalCost { get; private init; }
+    public DateTime CreationTime { get; } = DateTime.UtcNow;
+    public bool IsComplited { get; private set; }
+    public IReadOnlyCollection<ProductInfo> OrderItems { get; private init; }
     
     public void Complite() 
     {
         IsComplited = true;
     }
-    
-    private readonly ProductInfo[] _orderItems;
-    
-    public IReadOnlyCollection<ProductInfo> OrderItems => _orderItems;
-    
+     
 }
