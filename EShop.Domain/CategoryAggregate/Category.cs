@@ -6,7 +6,6 @@ public class Category : BaseAggregate
 {
     private string _name;
     private IReadOnlyCollection<string> _requiredAttributes;
-
     public required string Name
     {
         get => _name;
@@ -16,7 +15,6 @@ public class Category : BaseAggregate
             _name = value;
         }
     }
-    
     public required IReadOnlyCollection<string> RequiredAttributes
     {
         get => _requiredAttributes;
@@ -26,7 +24,6 @@ public class Category : BaseAggregate
             _requiredAttributes = value;
         }
     }
-
     /*
     private IReadOnlyDictionary<string, AttributeValues> _requiredAttributes;
     
